@@ -60,25 +60,22 @@ public class FCMPlugin: CAPPlugin, MessagingDelegate {
     }
     
     @objc func getToken(_ call: CAPPluginCall) {
-        if (fcmToken ?? "").isEmpty {
-            Messaging.messaging().token { token, error in
-                if let error = error {
-                    print("Error fetching FCM registration token: \(error)")
-                    call.reject("Failed to get instance FirebaseID", error.localizedDescription)
-                } else if let token = token {
-                    print("FCM registration token: \(token)");
-                    self.fcmToken = token;
-                    call.resolve([
-                        "token": token
-                    ]);
+            if (fcmToken ?? "").isEmpty {
+                let token = Messaging.messaging().fcmToken ?? "";
+                if (token).isEmpty {
+                    call.reject("Firebase FCM token is empty")
+                    return
                 }
+                print("FCM registration token: \(token)");
+                self.fcmToken = token;
+                call.resolve([
+                    "token": token
+                ]);
+            } else {
+                call.resolve([
+                    "token": fcmToken
+                ])
             }
-        }
-        else{
-            call.resolve([
-                "token": fcmToken
-            ])
-        }
     }
     
     @objc func deleteInstance(_ call: CAPPluginCall) {
