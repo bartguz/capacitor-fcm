@@ -1,6 +1,6 @@
 ## Notice 🚀
 
-This is a fork of '@capacitor-community/fcm' now maintained by Nursa. SEMVER continues from last version of old plugin
+This is a fork of `@capacitor-community/fcm` now maintained by Nursa. SEMVER continues from last version of old plugin
 
 ## Installation
 
