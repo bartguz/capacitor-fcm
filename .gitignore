@@ -21,3 +21,6 @@ xcuserdata/
 
 # Podfiles
 Pods/
+
+# output folder
+dist/

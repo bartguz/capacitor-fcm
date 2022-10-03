@@ -1,45 +1,42 @@
 <p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
 <h3 align="center">Capacitor FCM</h3>
-<p align="center"><strong><code>@capacitor-community/fcm</code></strong></p>
+<p align="center"><strong><code>@nursa/capacitor-fcm</code></strong></p>
 <p align="center">
-  Capacitor community plugin for enabling FCM capabilities
+  Capacitor plugin enabling FCM capabilities
+</p>
+
+<p align="center">
+  Based on @capacitor-community/fcm
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
-  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@nursa/capacitor-fcm"><img src="https://img.shields.io/npm/l/@nursa/capacitor-fcm?style=flat-square" /></a>
 <br>
-  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
-  <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@nursa/capacitor-fcm"><img src="https://img.shields.io/npm/dw/@nursa/capacitor-fcm?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@nursa/capacitor-fcm"><img src="https://img.shields.io/npm/v/@nursa/capacitor-fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-16-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
 
-## Maintainers
-
-| Maintainer     | GitHub                                                  | Social                                      |
-| -------------- | ------------------------------------------------------- | ------------------------------------------- |
-| Stewan Silva   | [stewones](https://github.com/stewones)                 | [@stewones](https://twitter.com/stewones)   |
-| Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr) |
-
 ## Notice 🚀
 
-We're starting fresh under an official org. If you were using the previous npm package `capacitor-fcm`, please update your package.json to `@capacitor-community/fcm`. Check out [changelog](/CHANGELOG.md) for more info.
+This is a fork of '@capacitor-community/fcm' now maintained by Nursa. SEMVER continues from last version of old plugin
 
 ## Installation
 
 Using npm:
 
 ```bash
-npm install @capacitor-community/fcm
+npm install @nursa/capacitor-fcm
 ```
 
 Using yarn:
 
 ```bash
-yarn add @capacitor-community/fcm
+yarn add @nursa/capacitor-fcm
 ```
 
 Sync native files:
@@ -66,7 +63,7 @@ npx cap sync
 ## Usage
 
 ```ts
-import { FCM } from "@capacitor-community/fcm";
+import { FCM } from "@nursa/capacitor-fcm";
 import { PushNotifications } from "@capacitor/push-notifications";
 
 // external required step
@@ -134,7 +131,7 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
 - `npx cap add ios`
-- `npm install --save @capacitor-community/fcm`
+- `npm install --save @nursa/capacitor-fcm`
 - `npx cap sync ios` _(always do sync after a plugin install)_
 - `npx cap open ios`
 
@@ -160,7 +157,7 @@ If you need to implement opt-in behavior, you can disable the auto initializatio
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
 - `npx cap add android`
-- `npm install --save @capacitor-community/fcm`
+- `npm install --save @nursa/capacitor-fcm`
 - `npx cap sync android` _(always do sync after a plugin install)_
 - `npx cap open android`
 - add `google-services.json` to your `android/app` folder
